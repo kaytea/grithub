@@ -5,8 +5,8 @@ page = requests.get('https://www.grubhub.com/search/92_Pearson_Rd_Somerville,_MA
 # print page.text
 soup = BeautifulSoup(page.text)
 places = [h3.text for h3 in soup.findAll('h3', attrs={'class': 'restaurant-name'})]
-# id_num = [FIND.FIND for FIND in soup.findAll('FIND', attrs={'FIND': 'FIND'})]
-#    ^^^need to figure out more of how soup is scraping; id contained in obj attr, not txt
+# id_num = [li.FIND for li in soup.findAll('li', attrs={'FIND': 'FIND'})]
+#    ^^^need to figure out more of how soup is scraping; id contained in obj attr, not txt <li data-restaurant-id="270495"
 
 # class restaurant(object):
 #    def __init__(self, id): """holding out on adding arr of food_types for prelim"""
